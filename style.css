@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:'Courier New', Courier, monospace;
+}
+
+:root {
+    --bg-color: #cccccc;
+    --second-bg-color: #17181a;
+    --text-color: #17181a;
+    --main-color: #8f6db7;
+    --second-color: #f8a150;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+}
+
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+body {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: auto;
+    background-color: var(--bg-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.category-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    flex: 1 1 40rem;
+    justify-content: space-evenly;
+}
+
+.category-box {
+    position: relative;
+    color: var(--bg-color);
+    border: .2rem solid var(--second-color);
+    border-radius: 1rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+    max-width: 50rem;
+    min-width: 20rem;
+    min-height: 25rem;
+}
+
+.entrees {
+    background-image: url(imgs/teriyaki-salmon.jpeg);
+}
+
+.sides {
+    background-image: url(imgs/mushrooms-broccoli.jpeg);
+}
+
+.desserts {
+    background-image: url(imgs/dessert-placeholder.jpeg);
+}
+
+.drinks {
+    background-image: url(imgs/drinks-placeholder.jpeg);
+}
+
+.category-name {
+    font-size: 1.7rem;
+    color: --second-bg-color;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    width: fit-content;
+    height: fit-content;
+}
+
+.category-picture {
+    margin: 1.5rem 0;
+    max-width: 47rem;
+    overflow: hidden;
+}
+
+h2{
+    margin: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    width: 225px;
+    font-family: Copperplate, fantasy;
+    font-size: large;
+    font-style: italic;
+    font-weight: 900;
+    color:rgb(182, 144, 226);
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 300px;
+    border-radius: 10px;
+    background: url(https://i.imgur.com/9SM4mxU.jpeg) no-repeat;
+}
+
+.categories-box{
+    display: flex;
+    background-color: rgb(177, 165, 184);
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+.categories{
+    max-width: 300px;
+}
+
+ul {
+    margin: 0px;
+}
+
+img {
+    height: auto;
+    width: 450px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(182, 144, 226);
+}
+.footer {
+    background-color:  rgb(16, 16, 16);
+    color: rgb(182, 144, 226);
+    text-align: center;
+    margin-top: auto;
+    padding: 12px;
+}
