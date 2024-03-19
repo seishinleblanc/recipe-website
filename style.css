@@ -11,9 +11,9 @@
 }
 
 :root {
-    --bg-color: #cccccc;
+    --bg-color: #17181a;
     --second-bg-color: #17181a;
-    --text-color: #17181a;
+    --text-color: #e26b0a;
     --main-color: #8f6db7;
     --second-color: #f8a150;
 }
@@ -40,6 +40,7 @@
     position: relative;
     font-size: 2.5rem;
     color: var(--text-color);
+    font-family: "Orbitron", sans-serif;
 }
 
 body {
@@ -64,10 +65,15 @@ section {
     justify-content: space-evenly;
 }
 
+.category-column {
+    justify-content: center;
+    align-items: center;
+}
+
 .category-box {
     position: relative;
     color: var(--bg-color);
-    border: .2rem solid var(--second-color);
+    /* border: .2rem solid var(--second-color); */
     border-radius: 1rem;
     padding: .5rem 1.5rem;
     z-index: 1;
@@ -95,12 +101,13 @@ section {
 
 .category-name {
     font-size: 1.7rem;
-    color: --second-bg-color;
+    color: var(--text-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background: transparent;
-    width: fit-content;
     height: fit-content;
+    text-shadow: var(--text-color) 1px 0 10px;
+    padding: 5px 0 0 0;
 }
 
 .category-picture {
@@ -129,13 +136,6 @@ h2{
     background: url(https://i.imgur.com/9SM4mxU.jpeg) no-repeat;
 }
 
-.categories-box{
-    display: flex;
-    background-color: rgb(177, 165, 184);
-    text-align: center;
-    justify-content: space-between;
-    padding: 0 80px;
-}
 
 .categories{
     max-width: 300px;
