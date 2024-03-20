@@ -12,7 +12,7 @@
 
 :root {
     --bg-color: #17181a;
-    --second-bg-color: #17181a;
+    --second-bg-color: #000000;
     --text-color: #e26b0a;
     --main-color: #8f6db7;
     --second-color: #f8a150;
@@ -23,8 +23,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
-    background: transparent;
+    padding: 1rem 9%;
+    background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,8 +43,20 @@
     font-family: "Orbitron", sans-serif;
 }
 
+.logo:hover {
+    color: var(--second-color);
+    text-shadow: 
+    0 0 7px var(--text-color),
+    0 0 10px var(--text-color),
+    0 0 21px var(--text-color),
+    0 0 42px var(--text-color),
+    0 0 82px var(--text-color),
+    0 0 92px var(--text-color),
+    0 0 102px var(--text-color);
+}
+
 body {
-    margin: 50px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -83,6 +95,13 @@ section {
     min-height: 25rem;
 }
 
+.category-box:hover {
+    transition: all 0.1s ease-out;
+    box-shadow: 0 4px 8px var(--bg-color);
+    transform: translateY(-2px);
+    top: -4px;
+}
+
 .entrees {
     background-image: url(imgs/teriyaki-salmon.jpeg);
 }
@@ -115,6 +134,68 @@ section {
     max-width: 47rem;
     overflow: hidden;
 }
+
+.recipe-container {
+    padding: 300px 0 0 0;
+}
+
+.recipe-row {
+    position: absolute;
+    height: 300px;
+    width: 1000px;
+    top: 200px;
+    left: calc(50% - 500px);
+    display: flex;
+  }
+
+.recipe-card {
+    height: 200px;
+    width: 280px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+
+.recipe-card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.recipe-card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.recipe-card:hover ~ .recipe-card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.recipe-title {
+    color: var(--text-color);
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+
+  .recipe-picture {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .recipe-description {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 120px);
+  }
 
 h2{
     margin: 10px;
@@ -155,9 +236,9 @@ a {
     color: black;
 }
 
-a:hover {
+/* a:hover {
     color: rgb(182, 144, 226);
-}
+} */
 .footer {
     background-color:  rgb(16, 16, 16);
     color: rgb(182, 144, 226);
